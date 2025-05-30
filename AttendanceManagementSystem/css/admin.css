@@ -1,0 +1,439 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: poppins;
+}
+html , body{
+    height: 100%;
+    width: 100%;
+}
+body{
+    overflow-x: hidden;
+}
+.color-p{
+    color: #8395df;
+}
+a{
+    text-decoration: none;
+    color: rgb(62, 58, 58);
+}
+/* navbar */
+nav{
+    height: 120px;
+    width: 100%;
+}
+.nav-part1{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 60px;
+}
+.nav-part1 h4{
+    font-size: 22px;
+    font-weight: 400;
+}
+.logo{
+    height: 120px;
+    width: 150px;
+}
+img{
+    height: 100%;
+    width: 100%;
+}
+.admin-menu{
+    display: flex;
+    gap: 5vw;
+}
+.admin-menu i{
+    font-size: 25px;
+    font-weight: 400;
+    cursor: pointer;
+}
+.admin-menu i:hover{
+    color:#9CA4C4
+}
+.nav-part2{
+    height: 100%;
+    width: 350px;
+    position: absolute;
+    top: 0;
+    right: -350px;
+    background-color: #D6DEED;
+    padding: 60px 55px;
+    z-index: 555;
+}
+.nav-part2 h4{
+    font-size: 22px;
+    font-weight: 500;
+    margin-bottom: 15px;
+}
+.nav-part2 i{
+    position: absolute;
+    top: 40px;
+    right: 60px;
+    background-color: #fff;
+    border-radius: 50%;
+    padding: 5px;
+    font-weight: 600;
+    font-size: 22px;
+    cursor: pointer;
+}
+.nav-part2 i:hover{
+    color:#9CA4C4;
+}
+.nav-part2 h4 a:hover{
+    color: #8395df;
+}
+
+/* main div */
+
+.main{
+    /* height: 100vh; */
+    width: 90%;
+    margin-left: 5%;
+    background-color: #f3f4f9;
+    border-radius: 15px;
+    padding: 40px 10px; 
+}
+.circles-box{
+    height: 18vw;
+    width: 60vw;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-radius: 15px;
+    margin-left: 15%;
+    /* border: 0.1px solid red; */
+}
+.circle{
+    height: 16vw;
+    width: 18vw;
+    position: relative;
+    margin: 1vw 3vw;
+    background-color: #fcfbfbf0;   /*background :#e3edf7*/
+    border-radius: 15px;
+    box-shadow: 0 5px 5px grey; 
+    padding: 15px 20px;
+    /* border: 0.1px solid red; */
+}
+.outer{
+    height: 160px;
+    width: 160px;
+    border-radius: 50%;
+    /* border: 0.1px solid grey; */
+    padding: 20px;
+    box-shadow: 6px 6px 10px -1px rgba(0,0,0,0.15),
+                -6px -6px 10px -1px rgba(255,255,255,0.7);
+}
+.inner{
+    height: 120px;
+    width: 120px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: inset 4px 4px 6px -1px rgba(0,0,0,0.2),
+                inset -4px -4px 6px -1px rgba(255,255,255,0.7),
+                -0.5px -0.5px 0px rgba(255,255,255,1),
+                0.5px 0.5px 0px rgba(0,0,0,0.15),
+                0px 12px 10px -10px rgba(0,0,0,0.05);
+}
+#number1{
+    font-weight: 600;
+    color:#555;
+}
+#number2{
+    font-weight: 600;
+    color:#555;
+}
+#number3{
+    font-weight: 600;
+    color:#555;
+}
+circle{
+    fill: none;
+    stroke-width: 20px; 
+    /* stroke: url(#GradientColor) ; */
+}
+.svg{
+    position: absolute;
+    top:15px;
+    left:20px;
+}
+.circle1{
+    stroke: green ;
+    stroke-dasharray: 472; /*complete circle value is 472*/
+    stroke-dashoffset: 472;/* this remove colorradient value based onn their value*/
+    animation: anim1 2s linear forwards;
+}
+.circle2{
+    stroke: red ;
+    stroke-dasharray: 472; /*complete circle value is 472*/
+    stroke-dashoffset: 472;/* this remove colorradient value based onn their value*/
+    animation: anim2 2s linear forwards;
+}
+.circle3{
+    stroke: greenyellow ;
+    stroke-dasharray: 472; /*complete circle value is 472*/
+    stroke-dashoffset: 472;/* this remove colorradient value based onn their value*/
+    animation: anim3 2s linear forwards;
+}
+.status{
+    padding: 25px 48px;
+}
+.status h4{
+    font-weight: 600;
+    color:#555;
+}
+.leave{
+    margin-left: 10px;
+}
+/* 
+@keyframes anim1 {
+    100%{
+        stroke-dashoffset: 141;  /*472-472*0.65 formula calculate the actual value 472 ka 65%=165.2*/ 
+/*    }
+}  */
+/* @keyframes anim2 {
+    100%{
+        stroke-dashoffset: 354 ;
+    }
+} */
+@keyframes anim3 {
+    100%{
+        stroke-dashoffset: 472 ;
+    }
+}
+
+/* branch wise boxes */
+.branch-wise-persent{
+    height: 27.5vw;
+    width: 100%;
+    margin-top: 50px;
+    background-color: #fcfbfbf0;
+    border-radius: 15px;
+    padding: 30px 50px;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    flex-direction: column;
+}
+.branch-wise-persent h2{
+    font-style: 22px;
+    font-weight: 600;
+    color:#555;
+    
+}
+.branch3{
+    height:40%;
+    width: 100%;
+    /* border: 1px solid grey; */
+    margin-top: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+.branch{
+    height: 90%;
+    width: 30%;
+    border: .1px solid grey;
+    border-radius: 15px;
+    box-shadow: 0 5px 5px grey; 
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    
+}
+.branch:hover{
+    transform: scale3d(1.05,1.05,1.05);
+}
+.branch-name{
+    font-size: 2.5vw;
+    font-weight: 600;
+    color:#555;
+}
+.branch-att-persent-box{
+    background-color: #9CA4C4;
+    height: 3.5vw;
+    width: 4vw;
+    border-radius: 15px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    
+}
+.branch-att-persent{
+    font-size: 1.5vw;
+    font-weight: 600;
+    color:white;
+    /* padding: 10px; */
+}
+
+/* footer */
+footer{
+    height: 20%;
+    width: 100%;
+    border-top: 0.1px solid grey;
+    background-color: #9CA4C4;
+}
+footer .trust{
+    height: 50%;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+}
+footer .trust img{
+    height: 40px;
+    width: 40px;
+}
+footer .trust h3{
+    font-style: 14px;
+    font-weight: 500;
+    font-family: poppins;
+}
+footer .members{
+    height: 30px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+}
+footer .members h3{
+    font-style: 14px;
+    font-weight: 500;
+    font-family: poppins;
+}
+footer .copyright{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+}
+footer .copyright h3{
+    font-weight: 500;
+    font-family: poppins;
+}
+
+/* trunk */
+#trunk{
+    border: none;
+    background: #9CA4C4;
+    padding: .75vw 1.5vw;
+    font-size: 16px;
+    border-radius: 5px;
+}
+#trunk:active{
+    transform: scale(0.98);
+    box-shadow: 5px 5px 10px grey;
+}
+
+@media(max-width:1100px ){
+
+    body{
+        overflow-x: hidden;
+    }
+
+    /* vavbar */
+    nav{
+        height: 100px;
+        width: 100%;
+    }
+    .nav-part1{
+        padding: 0 20px;
+    }
+    .logo{
+        height: 100px;
+        width: 120px;
+    }
+    .nav-part1 h4{
+        font-size: 18px;
+        font-weight: 400;
+    }
+    .admin-menu i{
+        font-size: 20px;
+        font-weight: 400;
+        cursor: pointer;
+    }
+    .nav-part2{
+        height: 100%;
+        width: 350px;
+        position: fixed;
+        top: 0;
+        right: -350px;
+        background-color: #D6DEED;
+        z-index: 555;
+    }
+
+    
+    /* circular progress bar */
+    .circles-box{
+        height: 800px;
+        width: 220px;
+        flex-direction: column;
+        margin-left: 1px;
+    }
+    .circle{
+        height: 225px;
+        width: 200px;
+    }
+    .main{
+        /* height:950px; */
+        width: 90%; 
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+    }
+
+    /* branch wise attendance box*/
+    .branch-wise-persent{
+        height: 650px;
+    }
+    h2{
+        font-size: 16px;
+    }
+    .branch3{
+        height: 50%;
+        flex-direction: column;
+    }
+    .branch{
+        height: 70px;
+        width: 200px;
+    }
+    .branch-wise-persent h2{
+        font-size: 16px;
+        /* margin-left:25%; */
+    }
+    .branch-name{
+        font-size: 18px;
+    }
+    .branch-att-persent-box{
+        height: 50px;
+        width: 50px;
+    }
+    .branch-att-persent{
+        font-size: 14px;
+    }
+
+    /* footer */
+    footer .trust img{
+        height: 25px;
+        width: 25px;
+    }
+    footer .trust h3{
+        font-size: 14px;
+        margin-left: 25px;
+    }
+    footer .members h3{
+        font-size: 14px;
+    }
+    footer .copyright h3{
+        font-size: 14px;
+    }
+    
+}
